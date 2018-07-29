@@ -52,7 +52,7 @@ class Ui_Form(object):
         self.pushGenerate.setText(_translate("Form", "Generate", None))
 
     def pushButtonClicked(self):
-        self.plainTextEdit.clear()       
+        self.plainTextEdit.clear       
         code = "" 
         length = 100
         chars = string.ascii_letters + string.digits + '!@#$%^&*()_-'
