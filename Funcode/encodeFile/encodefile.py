@@ -2,8 +2,9 @@ import base64
 import hashlib
 from Crypto import Random
 from Crypto.Cipher import AES
+import struct
 
-tets = encrypt(object,"hallo")
+
 
 class AESCipher(object):
 
@@ -32,4 +33,36 @@ class AESCipher(object):
     @staticmethod
     def _unpad(s):
         return s[:-ord(s[len(s)-1:])]
+
  
+
+
+
+#output = my_AESCipher.decrypt(secret)
+#print(output)
+
+'''
+secret = my_AESCipher.encrypt("this is private")
+
+with open("secret.txt", "w") as myfile:
+    myfile.write(str(secret))
+
+'''
+
+with open('secret.txt') as f:
+    secretTekst = f.readlines()
+my_AESCipher = AESCipher("test")
+whatTypIsThis = my_AESCipher.encrypt("geheim")
+print(type(whatTypIsThis))
+#print(str(secretTekst))
+mystringtest = b'JXlgt5uPeSIlzTiBDvRpVjkycJkwNJXTc+2CGs6zqGr0mRlSBBg7yZ5F4jYXuVuw',dnfdnf,dn"
+my_str_as_bytes = mystringtest.encode('utf-8')
+
+
+
+
+output = my_AESCipher.decrypt(y)
+'''
+output = my_AESCipher.decrypt(secretTekst)
+print(str(output))
+'''
