@@ -1,0 +1,4 @@
+-module(hello).
+-export([go/0]).
+
+go()-> hello world.
